@@ -28,7 +28,14 @@ class CalendarAPI:
         self.service = googleapiclient.discovery.build('calendar', 'v3', credentials=credentials)
 
     def get_events(self, date: Union[None, str] = None) -> List[Event]:
-        """Get week events for the specified date"""
+        """Get week events for the specified date
+
+        Args:
+            date (str): Date of the week you are looking for in the format '%Y-%m-%d'.
+
+        Returns:
+            List[Event]: All Events of the week.
+        """
 
         datetime_object = None
 
@@ -60,7 +67,14 @@ class CalendarAPI:
         return result
 
     def add_event(self, event: Event) -> Event:
-        """Add an event to the calendar"""
+        """Add an event to the calendar
+
+        Args:
+            event (Event): The calendar event object.
+
+        Returns:
+            Event: newly added calendar event object.
+        """
 
         start = event.date.astimezone(tz=timezone.utc).replace(tzinfo=None)
         end = start + timedelta(hours=1)
