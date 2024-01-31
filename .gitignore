@@ -21,7 +21,6 @@ venv
 docs.zip
 archive.zip
 .pytest_cache
-.env
 
 # vim temporary files
 *~
@@ -30,3 +29,7 @@ archive.zip
 
 # macOS
 .DS_Store
+
+# configs
+.env
+schedule-410514-694166038afd.json
