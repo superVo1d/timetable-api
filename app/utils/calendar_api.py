@@ -55,8 +55,6 @@ class CalendarAPI:
 
         result: List[Event] = []
 
-        print(events['items'])
-
         for item in events['items']:
             result.append(Event(
                 id=item['id'],

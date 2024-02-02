@@ -15,3 +15,5 @@ COPY . .
 # Default environment variables
 ENV MODULE_NAME=app.main
 ENV APP_HOME=/
+
+EXPOSE $PORT
