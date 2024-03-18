@@ -59,7 +59,8 @@ class CalendarAPI:
             result.append(Event(
                 id=item['id'],
                 name=item['summary'],
-                date=item['start']['dateTime']
+                date=item['start']['dateTime'],
+                dateEnd=item['end']['dateTime']
             ))
 
         return result
@@ -90,7 +91,8 @@ class CalendarAPI:
         return Event(
             id=event['id'],
             name=event['summary'],
-            date=event['start']['dateTime']
+            date=event['start']['dateTime'],
+            dateEnd=event['end']['dateTime']
         )
 
     def _format_date(self, date: datetime) -> str:

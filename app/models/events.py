@@ -7,6 +7,7 @@ class Event(BaseModel):
     id: str
     name: str
     date: datetime
+    dateEnd: datetime
 
 
 class EventAdd(BaseModel):
